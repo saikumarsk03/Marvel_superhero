@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    position: relative;
+    animation: fadeIn 2s forwards;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.superhero-lists h2 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  .superhero-lists li:first-child {
+    padding-bottom: 20px;
+  
+    border-bottom: 2px solid #b8b7b6;
+    font-weight: bold;
+    color: #F1F0E8;
+  }
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://i.pinimg.com/originals/6a/56/91/6a5691523946b056460d3a639662b39b.jpg");
+    background-size: cover;
+    filter: blur(5px); 
+    z-index: -1; 
+}
+
+  
+  .superhero-details {
+    padding-top: 20px;
+    background-image: url('https://www.kindpng.com/picc/m/33-334230_marvel-studios-logo-png-marvel-studios-logo-black.png');
+    background-size: contain;
+    display: flex;
+    padding-left: 20%;
+    padding-right: 20%;
+    flex-direction: column;
+    align-items: center;
+    margin: 3rem;
+    border-radius: 5px;
+  }
+  
+  .superhero-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    box-shadow: 5px 15px 25px rgb(0, 0, 0);
+    transition: all 0.5s;
+  }
+  .superhero-image:hover{
+    transform: scale(1.1);
+  }
+  .superhero-name {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .superhero-description {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .superhero-lists {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+  }
+  
+  .comics-list {
+    grid-column: span 1;
+  }
+  
+  .series-list,
+  .stories-list,
+  .events-list {
+    grid-column: span 1;
+  }
+  
+  .comics-list,
+.series-list, .stories-list,
+.events-list{
+  position: relative;/* Ensure pseudo-element is positioned relative to the container */
+  color: #F1F0E8; 
+  
+}
+
+.comics-list::before,
+.series-list::before, .stories-list::before,
+.events-list::before {
+  content: ''; /* Required for pseudo-elements */
+  position: absolute; /* Position the pseudo-element */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://assets.puzzlefactory.pl/puzzle/382/952/original.jpg');
+  background-size: cover;
+  filter: blur(15px);
+  z-index: -1; 
+}
+
+  

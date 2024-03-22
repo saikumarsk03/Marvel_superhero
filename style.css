@@ -1,0 +1,109 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: url("https://i.pinimg.com/originals/6a/56/91/6a5691523946b056460d3a639662b39b.jpg");
+  background-size: cover;
+  animation: fadeIn 2s forwards;
+font-family: cursive !important;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#bgVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover;
+  z-index: -1;
+  filter: blur(1px);
+}
+
+nav{
+  color: #F1F0E8;
+}
+h1 {
+  text-align: center;
+  color: #F1F0E8;
+  position: absolute;
+  left: 35%;
+  top: 4px;
+}
+nav{
+ background-color: transparent;
+}
+#searchInput {
+  border-radius: 10px;
+  margin-top: 50px;
+  margin-left: 10%;
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+#favoritesList{
+  margin-top: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#superheroesList{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#superheroesList,#favoritesList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 30px;
+  
+}
+
+.superhero {
+ background-image: url('https://www.kindpng.com/picc/m/33-334230_marvel-studios-logo-png-marvel-studios-logo-black.png');
+ background-size:contain;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px black;
+  padding: 10px;
+  text-align: center;
+  transition: all 0.5s;
+  animation: fadeIn 2s forwards;
+  
+
+}
+.superhero:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.superhero img {
+  max-width: 200px;
+  max-height: 400px;
+  margin-bottom: 10px;
+}
+
+
+
+.addtofav,.removeBtn{
+  background-color: #444444;
+  color: #F1F0E8;
+  border-radius: 5px;
+ bottom: 0px;
+}
+.removeBtn{
+  margin-bottom: 20px;
+  padding: 2px;
+  padding-left: 15px;
+  padding-right:15px ;
+}
+
+.addtofav:hover, .removeBtn:hover{
+  background-color:#8f0000;
+}
+
+.addtofav:active, .removeBtn:active{
+transform: scale(0.9);
+}
